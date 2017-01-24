@@ -14,7 +14,7 @@ public class main {
 		for (int i = 0; i < input.length() ; i++) {
 			ch = input.charAt(i);
 
-			if (Character.isLetter(ch)) {
+			if (Character.isLetter(ch) || ch == '\'') {
 				aux = aux.concat(Character.toString(ch));				
 			}
 			else {

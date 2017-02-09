@@ -3,7 +3,6 @@ import com.github.edoreld.quiz.AdditionQuestion;
 import com.github.edoreld.quiz.SubtractionQuestion;
 import com.github.edoreld.quiz.GeneralQuestion;
 import java.util.Scanner;
-import java.io.IOException;
 
 public class QuizTaking 
 {
@@ -19,6 +18,11 @@ public class QuizTaking
 		gradeQuiz();
 	}
 	
+	
+	/**
+	 * Compares users' answers to the quiz to the right answers and tells the user whether
+	 * they were correct or not
+	 */
 	private static void gradeQuiz() {
 		
 		for (int w = 0; w < 40; w++) {
@@ -47,6 +51,9 @@ public class QuizTaking
 		}
 	}
 
+	/**
+	 * Asks different types of questions to the user and stores the answers in an array
+	 */
 	private static void administerQuiz()  
 	{
 		System.out.println("Welcome to the quiz. Please answer the following questions for your chance to win a free pony");
@@ -71,6 +78,11 @@ public class QuizTaking
 		stdin.close();
 	}
 
+	/* 
+	 * Creates an array of questions by generating 9 random addition or subtraction questions and 1
+	 * extra custom question
+	 */
+	
 	private static void createQuiz() 
 	{
 		

@@ -18,9 +18,9 @@ public class EE5_3 {
 		
 		for (int total = 2; total <= 12; total++) {
 			StatCalc sc = new StatCalc();
-		for (int i = 0; i < numberOfRolls; i++) {
-			sc.enter(rollFor(total));
-		}
+			for (int i = 0; i < numberOfRolls; i++) {
+				sc.enter(rollFor(total));
+			}
 		System.out.printf("%22.2f",sc.getMean());
 		System.out.printf("%10.2f",sc.getStandardDeviation());
 		System.out.printf("%25.2f\n",sc.getMax());

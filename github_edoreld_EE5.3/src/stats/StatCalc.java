@@ -12,6 +12,7 @@ public class StatCalc {
     private int count;   // Number of numbers that have been entered.
     private double sum;  // The sum of all the items that have been entered.
     private double squareSum;  // The sum of the squares of all the items.
+    private double max = Double.NEGATIVE_INFINITY; // The highest number that has been entered 
 
     /**
      * Add a number to the dataset.  The statistics will be computed for all
@@ -21,6 +22,20 @@ public class StatCalc {
         count++;
         sum += num;
         squareSum += num*num;
+        if (num > max)
+        {
+        	max = num;
+        }
+        
+    }
+    
+    /**
+     * 
+     * @return (double) returns the max value of the numbers entered
+     */
+    
+    public double getMax() {
+    	return max;    	
     }
 
     /**

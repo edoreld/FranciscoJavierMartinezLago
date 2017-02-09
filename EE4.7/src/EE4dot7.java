@@ -37,6 +37,10 @@ public class EE4dot7 {
 		
 	}
 	
+	/**
+	 * This method fills the two global arrays firstNumberArray and secondNumberArray with random numbers
+	 */
+	
 	public static void createQuiz() {
 		/** 
 		 * We initialize the number arrays with random numbers from 1 to 50
@@ -50,6 +54,12 @@ public class EE4dot7 {
 		}
 	}
 	
+	/**
+	 * This method iterates through the two global arrays firstNumberArray & secondNumberArray and asks
+	 * the user what the sum of the values at index 1 through 10 of the arrays is and registers the sum
+	 * in another array, answerArray
+	 */
+	
 	public static void administerQuiz() {
 		Scanner stdin = new Scanner(System.in);
 		
@@ -61,6 +71,12 @@ public class EE4dot7 {
 		
 		stdin.close();
 	}
+	
+	/**
+	 * This method prints out the sum of the numbers in the global arrays firstNumberArray and secondNumberArray
+	 * and then checks it against the answer given by the user stored in answerArray and prints out the answer
+	 * along whether it was correct or not
+	 */
 
 	public static void gradeQuiz() {
 		for (int i = 0; i < answerArray.length; i++) {

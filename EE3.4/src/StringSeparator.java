@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class main {
+public class StringSeparator {
 
 	public static void main(String[] args) {
 		

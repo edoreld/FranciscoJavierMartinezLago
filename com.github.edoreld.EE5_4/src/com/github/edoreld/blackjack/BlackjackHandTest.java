@@ -1,8 +1,8 @@
 package com.github.edoreld.blackjack;
 
-import com.github.edoreld.blackjack.TextIO;
 import com.github.edoreld.blackjack.BlackjackHand;
 import com.github.edoreld.blackjack.Deck;
+import com.github.edoreld.text.TextIO;
 
 import java.util.Random;
 
@@ -11,11 +11,11 @@ public class BlackjackHandTest{
 	public static void main(String[] args) {
 		
 		System.out.println("Welcome to Blackjack © 2017 edoreld");
-		System.out.println("#############################################");
+		repeatCharln("#",35);
 		BlackjackHand playerHand;
 		Deck deck;
 		
-		String answer = resetAnswer();
+		String answer = "?";
 		
 		do {
 			deck = new Deck(false);
@@ -47,20 +47,12 @@ public class BlackjackHandTest{
 			while (!answer.equals("yes") && !answer.equals("no")) {
 				System.out.println("Please input either 'yes' or 'no'");
 				answer = TextIO.getln();
-				answer = resetAnswer();
 			}
 			
 		} 
 		while ( !answer.equals("no"));
 	}
 	
-	/**
-	 * Used to make it more obvious that we are resetting the answer variable
-	 * @return a questions mark string
-	 */
-	private static String resetAnswer() {
-		return "?";
-	}
 	
 	/**
 	 * prints an empty line
@@ -80,7 +72,7 @@ public class BlackjackHandTest{
 	}
 	
 	/**
-	 * Prints a specific character a number of times on the screen.
+	 * Prints a specific character a number of times on the screen
 	 * @param c: the string to repeat
 	 * @param n: the number of times we want to print the string
 	 */
